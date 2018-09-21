@@ -1,7 +1,7 @@
 /*
-	Epilogue by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+	kagof.com released under Creative Commons Attribution 4.0 license
+	
+	Adapted from Epilogue by TEMPLATED - templated.co @templatedco - CC Attribution 3.0 license
 */
 
 (function($) {

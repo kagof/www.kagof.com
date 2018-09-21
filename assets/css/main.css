@@ -1,13 +1,8 @@
 @import url(font-awesome.min.css);
 /*
-	I'm not a fan of this font.
-	@import url("https://fonts.googleapis.com/css?family=Pacifico|Source+Sans+Pro:200,400");
-*/
+	kagof.com released under Creative Commons Attribution 4.0 license
 
-/*
-	Epilogue by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+	Adapted from Epilogue by TEMPLATED - templated.co @templatedco - CC Attribution 3.0 license
 */
 
 /* Reset */
@@ -281,7 +276,7 @@
 	}
 
 		a:hover {
-			color: #EF6480 !important;
+			color: #FA214D !important;
 		}
 
 	strong, b {
@@ -433,8 +428,8 @@
 		input[type="button"]:hover,
 		button:hover,
 		.button:hover {
-			color: #EF6480 !important;
-			box-shadow: inset 0 0 0 2px #EF6480;
+			color: #FA214D !important;
+			box-shadow: inset 0 0 0 2px #FA214D;
 		}
 
 		input[type="submit"]:active,
@@ -639,8 +634,8 @@
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #EF6480;
-			box-shadow: 0 0 0 1px #EF6480;
+			border-color: #FA214D;
+			box-shadow: 0 0 0 1px #FA214D;
 		}
 
 	.select-wrapper:before {
@@ -660,15 +655,15 @@
 
 	input[type="checkbox"]:checked + label:before,
 	input[type="radio"]:checked + label:before {
-		background-color: #EF6480;
-		border-color: #EF6480;
+		background-color: #FA214D;
+		border-color: #FA214D;
 		color: #ffffff;
 	}
 
 	input[type="checkbox"]:focus + label:before,
 	input[type="radio"]:focus + label:before {
-		border-color: #EF6480;
-		box-shadow: 0 0 0 1px #EF6480;
+		border-color: #FA214D;
+		box-shadow: 0 0 0 1px #FA214D;
 	}
 
 	::-webkit-input-placeholder {
@@ -713,20 +708,32 @@
 		}
 
 		.icon.major {
-			display: block;
-			margin: 0 0 1.5em 0;
+			width: 2.5em;
+			margin-top: 0;
+			margin-left: auto;
+			margin-right: auto;
 		}
 
 			.icon.major:before {
 				cursor: default;
 				font-size: 2.5rem;
-				box-shadow: inset 0 0 0 2px #666666;
+				box-shadow: inset 0 0 0 3px #666666;
+				margin-bottom: 1em;
 				width: 2.5em;
 				height: 2.5em;
 				line-height: 2.5em;
 				display: inline-block;
 				border-radius: 100%;
 				color: #666666;
+				-moz-transition: text-shadow 0.5s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+				-webkit-transition: text-shadow 0.5s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+				-ms-transition: text-shadow 0.5s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+				transition: text-shadow 0.5s ease-in-out, box-shadow 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+			}
+			.icon.major:hover:before {
+				color: #FA214D !important;
+				box-shadow: inset 0 0 0 2px #FA214D;
+				text-shadow: 0 0 5px #FA214D;
 			}
 
 		@media screen and (max-width: 736px) {
@@ -734,7 +741,7 @@
 			.icon.major:before {
 				font-size: 2rem;
 			}
-
+			
 		}
 
 /* Image */
@@ -1089,7 +1096,7 @@
 			}
 
 				.item header a:hover {
-					color: #EF6480 !important;
+					color: #FA214D !important;
 				}
 
 			.item header strong, .item header b {
@@ -1313,7 +1320,7 @@
 		}
 
 			#header a:hover {
-				color: #EF6480 !important;
+				color: #FA214D !important;
 			}
 
 		#header strong, #header b {
@@ -1379,19 +1386,11 @@
 				font-size: 4em;
 				padding: 0 0.5em 0.25em 0.5em;
 				text-transform: none;
-				/** REMOVED
-				font-weight: 200;
-				letter-spacing: 0;
-				font-family: "Pacifico", cursive;
-				border-bottom: solid 2px #ffffff;
-				/** /REMOVED **/
-				/** ADDED **/
 				letter-spacing: 0.325rem;
 				font-weight: 400;
 				opacity: 0.75;
 				color: #e0e0e0;
 				border-bottom: solid 2px #e0e0e0;
-				/** /ADDED **/
 			}
 
 			#header.alt p {
@@ -1567,3 +1566,50 @@
 				}
 
 		}
+
+		/* effect-box - adapted from https://codepen.io/colloque/pen/bDgmx */
+			.effect-box .effect-box-target:after,
+			.effect-box .effect-box-target:before {
+				content: '';
+				position: absolute;
+				left: 0;
+				display: inline-block;
+				height: 1.83em;
+				width: calc(100% + 0.62em);
+				margin: auto;
+				margin-top: -0.2em;
+				margin-left: -0.47em;
+				opacity: 0;
+				-ms-transition: opacity 0.35s, -ms-transform 0.35s;
+				-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+				-moz-transition: opacity 0.35s, -moz-transform 0.35s;
+				transition: opacity 0.35s, transform 0.35s;
+				
+			}
+
+			.effect-box .effect-box-target:before {
+				border-left: 1px dashed;
+				border-right: 1px dashed;
+				-ms-transform: scale(1,0);
+				-webkit-transform: scale(1,0);
+				-moz-transform: scale(1,0);
+				transform: scale(1,0);
+			}
+
+			.effect-box .effect-box-target:after {
+				border-bottom: 1px dashed;
+				border-top: 1px dashed;
+				-ms-transform: scale(0,1);
+				-webkit-transform: scale(0,1);
+				-moz-transform: scale(0,1);
+				transform: scale(0,1);
+			}
+
+			.effect-box:hover .effect-box-target:after,
+			.effect-box:hover .effect-box-target:before {
+				opacity: 1;
+				-ms-transform: scale(1);
+				-webkit-transform: scale(1);
+				-moz-transform: scale(1);
+				transform: scale(1);
+			}

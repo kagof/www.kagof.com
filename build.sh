@@ -5,11 +5,11 @@ if [ -d "build" ]; then
   rm -rf build
 fi
 mkdir build
-cp --recursive -v index.html LICENSE.txt images build
+cp --recursive -v index.html kgoffin-pgp-public.asc LICENSE.txt images build
 mkdir build/assets
 cp --recursive -v assets/fonts assets/icons build/assets
 mkdir build/assets/css
-cp --recursive -v assets/css/images assets/css/font-awesome.min.css build/assets/css
+cp --recursive -v assets/css/images assets/css/fork-awesome.min.css build/assets/css
 mkdir build/assets/js
 cp --recursive -v assets/js/jquery.min.js assets/js/skel.min.js build/assets/js
 
